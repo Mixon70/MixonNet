@@ -1,95 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MixonTech</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap">
-  <style>
-    body {
-      font-family: 'Open Sans', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #383737;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kingsville Rewards - Support Local, Earn Rewards</title>
+    <style>
+        /* Reset and General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
 
-    header {
-      background-color: #32a9e0;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
 
-    header h1 {
-      font-size: 24px;
-      margin: 0;
-    }
+        /* Navigation Bar */
+        .navbar {
+            background-color: #007BFF;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    main {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: #b4b2b2;
-      border: 1px solid #ddd;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+        .navbar h1 {
+            color: #fff;
+            font-size: 24px;
+        }
 
-    h2 {
-      margin-top: 0;
-      font-size: 18px;
-    }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 16px;
+        }
 
-    p {
-      margin-bottom: 20px;
-    }
+        .navbar a:hover {
+            color: #FF6200;
+        }
 
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
+        /* Hero Section */
+        .hero {
+            background-color: #fff;
+            text-align: center;
+            padding: 50px 20px;
+        }
 
-    ul li {
-      margin-bottom: 10px;
-    }
+        .hero h2 {
+            font-size: 36px;
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
 
-    ul li a {
-      text-decoration: none;
-      color: #337ab7;
-    }
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
 
-    ul li a:hover {
-      color: #23527c;
-    }
+        .hero .btn {
+            background-color: #FF6200;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
 
-    footer {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      background-color: #32a9e0;
-      color: white;
-      padding: 10px;
-      text-align: center;
-      clear: both;
-    }
-  </style>
+        .hero .btn:hover {
+            background-color: #e55a00;
+        }
+
+        /* Business List Section */
+        .businesses {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .businesses h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .business-list {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .business-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 200px;
+        }
+
+        /* Dashboard Section (Placeholder) */
+        .dashboard {
+            padding: 30px;
+            background-color: #fff;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .dashboard h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* Admin Page */
+        .admin-page {
+            padding: 30px;
+            background-color: #fff;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .admin-page h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .admin-page textarea {
+            width: 100%;
+            height: 200px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #007BFF;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Michael Mixon - I.T. Technician and Tech Enthusiasts</h1>
-  </header>
-  <main>
-    <h2>About Me</h2>
-    <p>
-      I am an I.T. Professional with a passion for all things technology. I have been working in the industry for over 3 years and have experience in a wide range of areas including networking, server administration, and cybersecurity.
-    </p>
-   
-  </main>
-  <footer>
-    &copy; 2024 MixonTech
-  </footer>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <h1>Kingsville Rewards</h1>
+        <div>
+            <a href="#customer-login">Customer Login</a>
+            <a href="#vendor-login">Business Login</a>
+            <a href="#admin-login">Admin Login</a>
+        </div>
+    </div>
+
+    <!-- Hero Section (Front End) -->
+    <div class="hero">
+        <h2>Earn Points, Support Kingsville!</h2>
+        <p>Join Kingsville Rewards to earn points at local businesses, redeem rewards, or enter prize draws!</p>
+        <a href="#signup" class="btn">Sign Up Now</a>
+    </div>
+
+    <!-- Participating Businesses -->
+    <div class="businesses">
+        <h3>Our Local Partners</h3>
+        <div class="business-list">
+            <div class="business-card">Joe’s Coffee</div>
+            <div class="business-card">Main St. Bakery</div>
+            <div class="business-card">Kingsville Hardware</div>
+        </div>
+    </div>
+
+    <!-- User Dashboard (Placeholder) -->
+    <div class="dashboard" id="customer-login">
+        <h3>Customer Dashboard</h3>
+        <p>Points Balance: 150 points</p>
+        <p>Rewards Available: Redeem 100 points for a $5 coupon</p>
+        <p>Transaction History: Earned 20 points at Joe’s Coffee</p>
+    </div>
+
+    <!-- Vendor Dashboard (Placeholder) -->
+    <div class="dashboard" id="vendor-login">
+        <h3>Business Dashboard</h3>
+        <p>Customers This Week: 10</p>
+        <p>Total Points Given: 500</p>
+        <p>Business Profile: Joe’s Coffee</p>
+    </div>
+
+    <!-- Admin Page -->
+    <div class="admin-page" id="admin-login">
+        <h3>Admin Dashboard</h3>
+        <p>Total Active Users: 25</p>
+        <p>Total Businesses: 3</p>
+        <h4>Notes & Action Plan</h4>
+        <textarea readonly>
+Action Plan to Build Kingsville Rewards Demo
+Week 1: Sign up for Bubble and learn basics.
+Week 2: Design homepage with pitch and business list.
+Week 3: Set up authentication for customers and businesses.
+Week 4: Build user dashboard with points and rewards.
+Week 5: Create vendor dashboard with stats.
+Week 6: Add admin page with notes.
+Week 7: Integrate Stripe for payments.
+Week 8: Test and polish the demo.
+
+Next Steps:
+1. Show demo to local businesses for feedback.
+2. Tweak based on input.
+3. Launch a pilot with a few businesses.
+4. Expand to more Kingsville businesses or nearby towns.
+        </textarea>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2025 Kingsville Rewards. Supporting our community, one point at a time.</p>
+    </div>
 </body>
 </html>
